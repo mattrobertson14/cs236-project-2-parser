@@ -6,16 +6,18 @@ using namespace std;
 // info on a Token to test
 class Token {
 public:
-  Token(string t, string v, int lN);
+  Token(int t, string v, int lN);
   ~Token();
 
-  string getType();
+  int getType();
   string getValue();
   int getLineNumber();
   string output();
 
 private:
-  string type;
+  int type;
   string value;
   int lineNumber;
+  string typeLiteral[19] = {"COMMA", "PERIOD", "Q_MARK", "LEFT_PAREN", "RIGHT_PAREN", "COLON", "COLON_DASH", "MULTIPLY", "ADD", "SCHEMES",
+	"FACTS", "RULES", "QUERIES", "ID", "STRING", "COMMENT", "WHITESPACE", "UNDEFINED", "EOF"};
 };

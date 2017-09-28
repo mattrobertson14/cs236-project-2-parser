@@ -3,14 +3,14 @@
 
 using namespace std;
 
-Token::Token(string t, string v, int lN){
+Token::Token(int t, string v, int lN){
   type = t;
   value = v;
   lineNumber = lN;
 }
 Token::~Token(){}
 
-string Token::getType(){
+int Token::getType(){
   return type;
 }
 
@@ -23,5 +23,5 @@ int Token::getLineNumber(){
 }
 
 string Token::output(){
-  return "("+type+","+"\""+value+"\""+","+to_string(lineNumber)+")";
+  return "("+typeLiteral[type]+","+"\""+value+"\""+","+to_string(lineNumber)+")";
 }

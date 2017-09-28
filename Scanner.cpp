@@ -78,7 +78,7 @@ vector<Token> Scanner::scan(string input){
       default:
         scanForKeywords();
     }
-    Token t = Token(typeLiteral[type],value,start);
+    Token t = Token(type,value,start);
     tokens.push_back(t);
   }
   return tokens;
