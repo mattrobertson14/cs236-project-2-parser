@@ -10,15 +10,15 @@ Token::Token(string t, string v, int lN){
 }
 Token::~Token(){}
 
-string getType(){
+string Token::getType(){
   return type;
 }
 
-string getValue(){
+string Token::getValue(){
   return value;
 }
 
-int getLineNumber(){
+int Token::getLineNumber(){
   return lineNumber;
 }
 
