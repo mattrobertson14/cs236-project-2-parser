@@ -1,0 +1,11 @@
+#|	THIS TEST IS FOR:
+		a simple file with the minimum required things
+	OUTPUT:
+		Success!
+|#
+Schemes:
+  s(i)
+Facts:
+Rules:
+Queries:
+  q(i)?

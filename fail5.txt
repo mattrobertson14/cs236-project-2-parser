@@ -1,0 +1,19 @@
+#|	THIS TEST IS FOR:
+		an expression of an id and an expression of 2 strings without
+		the correct closing parenthesis of the expression
+	OUTPUT:
+		Failure!
+		  (PERIOD,".",16)
+|#
+Schemes:
+  anIDHERE(id, id, id)
+  lotsOfIDs(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
+
+Facts: 
+  fact1('1').
+
+Rules:
+  head(x,y,z) :- tail((a+(b*c)).
+
+Queries:
+  head(x,y)?

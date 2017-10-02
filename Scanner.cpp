@@ -78,8 +78,10 @@ vector<Token> Scanner::scan(string input){
       default:
         scanForKeywords();
     }
-    Token t = Token(type,value,start);
-    tokens.push_back(t);
+    if ( type != COMMENT ){
+      Token t = Token(type,value,start);
+      tokens.push_back(t);
+    }
   }
   return tokens;
 }

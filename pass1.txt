@@ -1,0 +1,27 @@
+#|	THIS TEST IS FOR:
+		spaced out IDs in schemes, one ID in schemes, lots of IDs, 0 facts,
+		1 rule, 1 query
+	OUTPUT:
+		Success!
+|#
+
+Schemes:
+  anIDHERE(id, id, id)
+  tooManySpaces(id,    id  , id)
+  oneID(id)
+
+#| comment that takes up
+a 
+lot 
+of 
+lines!! |#
+
+  lotsOfIDs(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
+
+Facts: # THERE ARE NO FACTS HERE AHHHHH!!
+
+Rules:
+  head(x,y,z) :- tail(z,y,x).
+
+Queries:
+  head(x,y)?

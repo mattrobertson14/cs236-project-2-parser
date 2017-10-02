@@ -1,0 +1,50 @@
+#|	THIS TEST IS FOR: 
+		many rules, expression(both * and +) in rule, expression(both * and +) and string in rule,
+		expression(both * and +) and id in rule, expression(both * and +) and id and string in rule, 
+		rule with 1 id,	expression(both * and +) in query, expression(both * and +) and string in query, 
+		expression(both * and +) and id in query,expression(both * and +) and id and string in query, 1 fact,
+		query with one id, expressions at the beginning of predicate and at the end, expressions with strings,
+		expressions with strings and ids, multiple predicates in a rule, nested expression
+  	OUTPUT:
+  		Success!
+|#
+
+
+Schemes:
+  scheme1(id1) #1
+  scheme2(id2,id3) #2
+  scheme3(id4,id5,id6) #3
+  scheme4(id7,id8,id9,id10) #4
+
+Facts: # facts 4 dayz
+  fact1('1').
+
+Rules:
+  a(x,y,z) :- b(z,y,x).
+  c(x) :- d((e*f)).
+  g(x,y) :- h((i+j)).
+  k(x,y,z) :- l('m',(n*o)).
+  p(x) :- q('r', (s+t)).
+  u(x,y) :- v(aa, (bb*cc)).
+  dd(x,y,z) :- ee(ff,(gg+hh)).
+  ii(x) :- jj(kk, 'll', (mm*nn)).
+  oo(x,y) :- pp(qq, (rr+ss),'tt').
+  uu(x,y,z) :- vv((ww*aaa)),bbb((ccc+ddd)),eee((fff*ggg),(hhh+iii)),jjj((kkk*lll),(mmm+nnn),(ooo*ppp)),qqq((rrr+sss),(ttt*uuu),(vvv+www), (A*B)).
+  C(x) :- D(('a'*'b'),('c'+'d')).
+  E(x,y) :- F(('a'*b),('c'+d)).
+  nest1(x) :- cleverID(((a*'b')*a),((a*'b')*(a+b)),((((((a*'b')*(a+b))*((a*'b')*(a+b)))*(a+((a*'b')*(a+b))))*((a*'b')*(a+b)))*(a+b))).
+
+Queries:
+  head(x,y)?
+  tail(x)?
+  query1((id1*id2))?
+  query2((id3+id4))?
+  query3((id5*id6),id7)?
+  query4(id8,(id9+id10))?
+  query5('1',(id11*id12))?
+  query6((id13+id14),'2')?
+  query7((id15*id16),'3',id17)?
+  query8('4',id18,(id17+id18))?
+  query9(('5'*'6'),('7'+'8'))?
+  query10(('9'*id19),('10'+id20))?
+  query11(((a*'b')*a),((a*'b')*(a+b)),((((((a*'b')*(a+b))*((a*'b')*(a+b)))*(a+((a*'b')*(a+b))))*((a*'b')*(a+b)))*(a+b)))?

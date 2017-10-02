@@ -1,0 +1,54 @@
+#|	THIS TEST IS FOR: 
+		one scheme, lots of facts, 0 rules, weird strings inside of facts, lots of strings, 
+		one string, empty string, queries with one id, queries with one string, queries with lots of ids,
+		queries with lots of strings, queries with a lot of strings and ids, empty string in query, weird spacing, 
+		with lots of spacing at the EOF
+	OUTPUT:
+		Success!
+|#
+
+
+Schemes:
+  scheme1(longid,shortid,mediumid)
+
+
+
+Facts: 
+  fact1('it''s important', 'to','have','strings').
+  fact2('there', 'are', 'many').
+  fact3('example','exampl','examp','exam','exa','ex','e','','e','ex','exa','exam','examp','exampl','example').
+  fact4('one string').
+  fact5(''). #tests the empty string by itself
+  fact6('Bob','Jim','Bill').
+
+  fact7('this', 'is').
+  fact8('the', 'story').
+  fact9('of', 'a', 'girl').
+  
+  fact10('who', 'cried').
+  
+  fact11('a', 'river', 'and').
+  
+  fact12('drown', 'the').
+  fact13('whole', 'world').
+
+
+
+Rules:#| AHHHH THERE ARE NOOO RULES HERE! OH NO? |#
+
+Queries:
+  head(x,y)?
+  shoulders(oneID)?
+  knees('one string')?
+ 
+  and(id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id, id)?
+  toes('string','string','string','string','string','string','string','string','string','string','string','string','string','string','string','string')?
+  eyes(id,'string',id,'string',id,id,id,id,'string',id,'string','string','string','string',id,id,id)?
+  ears('')?
+  mouth(how,great)?
+  and(that,'were')?
+  nose('done')?
+
+
+
+

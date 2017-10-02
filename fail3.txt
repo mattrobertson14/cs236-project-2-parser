@@ -1,0 +1,17 @@
+#|	THIS TEST IS FOR:
+		no facts but no fact keyword either
+	OUTPUT:
+		Failure!
+		  (RULES,"'Rules'",13)
+|#
+Schemes:
+  anIDHERE(id, id, id)
+  lotsOfIDs(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
+
+
+
+Rules:
+  head(x,y,z) :- tail(z,y,x).
+
+Queries:
+  head(x,y)?
