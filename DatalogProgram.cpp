@@ -15,7 +15,7 @@ DatalogProgram::~DatalogProgram(){
 }
 
 
-/*********** Grammar Functions ***********/
+/*********** Grammar Functions Start ***********/
 
 bool DatalogProgram::parse(vector<Token> t){
   tokens = t;
@@ -104,9 +104,13 @@ bool DatalogProgram::stringList(){
   return ( tokens[next].getType() == RIGHT_PAREN ) || ( match(COMMA) && matchFact(STRING) && stringList() );
 }
 
+/***********************************************************
+ ***********************************************************
+ ********************** E   N   D **************************
+ ***********************************************************
+ ***********************************************************/
 
-
-/*********** Helper Functions ***********/
+/*********** Helper Functions Start ***********/
 
 bool DatalogProgram::matchScheme(int type, string part_of){
   string token_value = tokens[next].getValue();
@@ -173,6 +177,14 @@ bool DatalogProgram::match(int type){
     return false;
   }
 }
+
+/***********************************************************
+ ***********************************************************
+ ********************** E   N   D **************************
+ ***********************************************************
+ ***********************************************************/
+
+/*********** Output Functions ***********/
 
 string DatalogProgram::toString(){
   string output = "";
