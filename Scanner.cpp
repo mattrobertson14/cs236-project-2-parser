@@ -6,7 +6,10 @@
 using namespace std;
 
 Scanner::Scanner(){}
-Scanner::~Scanner(){}
+Scanner::~Scanner(){
+  tokens.clear();
+  file.close();
+}
 
 //Uses state machines to retreive tokens
 vector<Token> Scanner::scan(string input){
