@@ -74,8 +74,6 @@ bool DatalogProgram::parameter(){
   } else {
     return expression();
   }
-
-  return match(STRING) || match(ID) || expression();
 }
 
 bool DatalogProgram::parameterList(){
