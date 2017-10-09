@@ -3,7 +3,7 @@
 #include <vector>
 #include <set>
 #include <iostream>
-#include "../scanner_files/Token.h"
+#include "Token.h"
 #include "Fact.h"
 
 using namespace std;

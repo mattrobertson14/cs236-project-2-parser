@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "../scanner_files/Token.h"
-#include "../param_classes/Parameter.h"
-#include "../param_classes/Id.h"
-#include "../param_classes/String.h"
-#include "../param_classes/Expression.h"
+#include "Token.h"
+#include "Parameter.h"
+#include "Id.h"
+#include "String.h"
+#include "Expression.h"
 
 using namespace std;
 

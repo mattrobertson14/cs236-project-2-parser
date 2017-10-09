@@ -2,11 +2,11 @@
 #include <string>
 #include <vector>
 #include <set>
-#include "scanner_files/Token.h"
-#include "subclasses/Schemes.h"
-#include "subclasses/Facts.h"
-#include "subclasses/Rules.h"
-#include "subclasses/Queries.h"
+#include "Token.h"
+#include "Schemes.h"
+#include "Facts.h"
+#include "Rules.h"
+#include "Queries.h"
 
 using namespace std;
 

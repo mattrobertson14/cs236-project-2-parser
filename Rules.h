@@ -3,7 +3,7 @@
 #include <vector>
 #include <set>
 #include <iostream>
-#include "../scanner_files/Token.h"
+#include "Token.h"
 #include "Rule.h"
 
 using namespace std;

@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "../scanner_files/Token.h"
+#include "Token.h"
 #include "Predicate.h"
 
 using namespace std;

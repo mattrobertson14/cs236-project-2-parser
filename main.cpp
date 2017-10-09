@@ -1,5 +1,5 @@
-#include "scanner_files/Scanner.cpp"
-#include "scanner_files/Token.cpp"
+#include "Scanner.h"
+#include "Token.h"
 #include "DatalogProgram.h"
 #include <iostream>
 #include <sstream>

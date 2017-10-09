@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <set>
-#include "../scanner_files/Token.h"
+#include "Token.h"
 
 using namespace std;
 

@@ -5,7 +5,7 @@
 #include "Parameter.h"
 #include "String.h"
 #include "Id.h"
-#include "../scanner_files/Token.h"
+#include "Token.h"
 
 using namespace std;
 
