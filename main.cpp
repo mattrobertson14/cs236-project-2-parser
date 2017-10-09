@@ -1,5 +1,5 @@
-#include "Scanner.h"
-#include "Token.h"
+#include "scanner_files/Scanner.cpp"
+#include "scanner_files/Token.cpp"
 #include "DatalogProgram.h"
 #include <iostream>
 #include <sstream>
@@ -10,24 +10,25 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
   Scanner scanner;
-  DatalogProgram datalogProgram;
   vector<Token> scannedTokens;
 
   if (argv[1]){
     scannedTokens = scanner.scan(argv[1]);
 
     try {
-      datalogProgram.parse(scannedTokens);
+      DatalogProgram dP = DatalogProgram(scannedTokens);
       cout<<"Success!"<<endl;
-      cout<<datalogProgram.toString()<<endl;
+      cout<<dP.toString()<<endl;
     } catch( Token token ){
       cout<<"Failure!"<<endl;
       cout<<"  "<<token.output()<<endl;
     }
+  } else {
+    cout<<"You need to enter a file name after ./[compiled_code]"<<endl;
   }
   /************* TESTS *************/
 
-  else {
+  /*else {
 
     cout<<"Test 1 (Success!) Output:"<<endl;
     try {
@@ -145,5 +146,5 @@ int main(int argc, char *argv[]) {
       cout<<"Failure!"<<endl;
       cout<<"  "<<token.output()<<endl<<endl;
     }
-  }
+  }*/
 }

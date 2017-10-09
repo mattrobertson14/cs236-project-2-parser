@@ -9,8 +9,13 @@ public:
   Parameter(){}
   ~Parameter(){}
 
-  string toString(){
+  virtual string toString(){
     return "";
   }
+
+  virtual int getIndex(){
+    return 0;
+  }
+
 private:
 };
